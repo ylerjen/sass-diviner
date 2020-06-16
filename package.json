@@ -2,6 +2,7 @@
 	"name": "sass-diviner",
 	"displayName": "sass-diviner",
 	"description": "",
+	"publisher": "ylerjen",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.46.0"
@@ -10,7 +11,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:sass-diviner.helloWorld"
+		"onLanguage:scss"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -18,6 +19,14 @@
 			{
 				"command": "sass-diviner.helloWorld",
 				"title": "Hello World"
+			},
+			{
+				"command": "sass-diviner.start",
+				"title": "Sass Diviner - Start"
+			},
+			{
+				"command": "sass-diviner.stop",
+				"title": "Sass Diviner - Stop"
 			}
 		]
 	},
@@ -33,6 +42,7 @@
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^7.0.2",
 		"@types/node": "^13.11.0",
+		"@types/node-sass": "^4.11.1",
 		"@types/vscode": "^1.34.0",
 		"@typescript-eslint/eslint-plugin": "^2.34.0",
 		"@typescript-eslint/parser": "^2.34.0",
@@ -42,5 +52,7 @@
 		"typescript": "^3.9.4",
 		"vscode-test": "^1.3.0"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"node-sass": "^4.14.1"
+	}
 }
